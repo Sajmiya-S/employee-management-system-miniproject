@@ -1,0 +1,33 @@
+         PLEASE READ THE INSTRUCTIONS CAREFULLY BEFORE STARTING REGISTRATION 
+---------------------------------------------------------------------------------------------------
+ USERNAME:
+   - Must contain only letters or numbers (no special characters or spaces).
+   - Should be more than 3 characters long.
+   - Cannot be entirely numeric.
+
+ PASSWORD:
+   - Minimum 6 characters long.
+   - Must include at least one uppercase letter, one lowercase letter, one digit, 
+     and one special character (@ # $ % ^ & * - _ !).
+   - You will need to confirm your password for verification.
+
+ ROLE ID:
+   - Enter 1 for Manager or 0 for Employee.
+
+ MANAGER REGISTRATION:
+   - You will need to provide: Full Name, Department, Contact Number, and Email ID.
+   - Department name must match an existing department (e.g., HR, FINANCE, IT, SALES, etc.).
+   - Contact number must contain exactly 10 digits.
+   - Email ID must be valid (example: name@example.com).
+
+ EMPLOYEE REGISTRATION:
+   - Requires a valid Manager ID for verification.
+   - You will need to provide: Full Name, Department, Job Title, Date of Joining, 
+     Salary, Contact Number, and Email ID.
+   - Date format should be DD-MM-YYYY.
+   - Department name must match an existing department.
+   - Contact number must contain exactly 10 digits.
+   - Email ID must be valid (example: name@example.com).
+
+ Any invalid input will ask you to re-enter the field.
+---------------------------------------------------------------------------------------------------
