@@ -1,4 +1,3 @@
-# employee-management-system-miniproject
 Employee Management System (EMS)
 ================================
 Project Overview
