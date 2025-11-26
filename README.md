@@ -6,13 +6,41 @@ The Employee Management System (EMS) is a Python-based CLI application to manage
 
 Key Features:
 -------------
-Employee registration and login
-Password management with strong validation
-Profile view and update
-Attendance management: punch in/punch out with working hours and overtime calculation
-Leave management: apply, track, and view leave balance
-Payroll deductions for unpaid leave or insufficient working hours
-Manager dashboard: add/edit/delete/search employees, approve/reject leaves, manage salaries
+👨‍💼 Employee Management
+
+Add new employees
+Update and delete employee records
+View all employees
+
+⏰ Attendance Management
+
+Daily clock-in/clock-out
+View attendance logs
+Employee-wise attendance summary
+
+📝 Leave Management
+
+Apply for leave
+Approve/Reject leave
+Leave history for each employee
+
+💰 Payroll Processing
+
+Calculate monthly salary
+Overtime, bonuses & deductions
+Generate payroll report
+
+🗄 Database Integration (SQLite)
+
+Persistent storage
+Normalized tables
+CRUD operations
+
+🔐 Other Features
+
+Error handling
+Modular code structure
+User-friendly menu-driven interface
 
 Requirements
 -------------
@@ -130,3 +158,18 @@ View Salary Details
 Note:
 Passwords must contain at least 1 uppercase, 1 lowercase, 1 digit, 1 special character, and minimum 6 characters.
 Leave applications exceeding balance are automatically treated as Paid Leave and deducted from salary.
+
+How to Run the Project
+-----------------------
+1. Clone the repository
+-----------------------
+git clone https://github.com/Sajmiya-S/employee-management-system-miniproject.git
+cd employee-management-system-miniproject
+
+2. Install dependencies
+-------------------------
+(No external libraries needed except Python + SQLite)
+
+3. Run the application
+------------------------
+python ems.py
