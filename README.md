@@ -1,175 +1,30 @@
-Employee Management System (EMS)
-================================
-Project Overview
-------------------
-The Employee Management System (EMS) is a Python-based CLI application to manage employees, attendance, leave, and payroll efficiently. It supports both Manager and Employee roles with role-specific dashboards and functionalities.
+# CLI-Based Employee Management System 🐍💼
 
-Key Features:
--------------
-👨‍💼 Employee Management
+A Command-Line Interface (CLI) Employee Management System built using **Python** and **SQLite**.  
+This project allows managing employee records, attendance, leave, and payroll with proper validation and role-based access.
 
-Add new employees
-Update and delete employee records
-View all employees
+---
 
-⏰ Attendance Management
+## 📌 Project Overview
+This mini-project demonstrates practical application of Python and database management.  
+It provides functionality for managing employees efficiently and practicing backend logic and database operations.
 
-Daily clock-in/clock-out
-View attendance logs
-Employee-wise attendance summary
+---
 
-📝 Leave Management
+## ✨ Features
+- Add, view, update, and delete employee records
+- Track employee attendance and leaves
+- Calculate payroll based on working days and salary
+- Role-based access (Admin/User)
+- Input validation to ensure data integrity
+- Simple CLI interface for easy navigation
 
-Apply for leave
-Approve/Reject leave
-Leave history for each employee
+---
 
-💰 Payroll Processing
+## 🛠 Tech Stack
+- **Python 3** – Core programming language
+- **SQLite** – Database for storing employee records
+- **Standard Python libraries** – `sqlite3`, `os`, `datetime`, etc.
 
-Calculate monthly salary
-Overtime, bonuses & deductions
-Generate payroll report
+---
 
-🗄 Database Integration (SQLite)
-
-Persistent storage
-Normalized tables
-CRUD operations
-
-🔐 Other Features
-
-Error handling
-Modular code structure
-User-friendly menu-driven interface
-
-Requirements
--------------
-Software Requirements:
-----------------------
-Python 3.8+
-SQLite3
-
-Python Libraries:
------------------
-sqlite3 (built-in)
-getpass (built-in)
-re (built-in)
-datetime (built-in)
-time (built-in)
-tabulate (built-in)
-
-Database Schema
-----------------
-1. User Table
-| Column   | Type    | Description             |
-| -------- | ------- | ----------------------- |
-| user_id  | INTEGER | Primary key             |
-| username | TEXT    | Login username          |
-| password | TEXT    | User password           |
-| role     | INTEGER | 1: Manager, 2: Employee |
-
-2. Department Table
-| Column    | Type    | Description     |
-| --------- | ------- | --------------- |
-| dept_id   | INTEGER | Primary key     |
-| dept_name | TEXT    | Department name |
-
-3. Manager Table
-| Column          | Type    | Description         |
-| --------------- | ------- | ------------------- |
-| manager_id      | INTEGER | Primary key         |
-| user_id         | INTEGER | Foreign key to User |
-| dept_id         | INTEGER | Department ID       |
-| name            | TEXT    | Manager name        |
-| contact         | INTEGER | Contact number      |
-| email           | TEXT    | Email ID            |
-
-4. Employee Table
-| Column          | Type    | Description         |
-| --------------- | ------- | ------------------- |
-| emp_id          | INTEGER | Primary key         |
-| user_id         | INTEGER | Foreign key to User |
-| dept_id         | INTEGER | Department ID       |
-| manager_id      | INTEGER | Foreign key-Manager |
-| name            | TEXT    | Employee name       |
-| job_title       | TEXT    | Designation         |
-| date_of_joining | TEXT    | YYYY-MM-DD          |
-| salary          | REAL    | Monthly salary      |
-| contact         | INTEGER | Contact number      |
-| email           | TEXT    | Email ID            |
-
-5. Attendance Table
-| Column         | Type    | Description                      |
-| -------------- | ------- | -------------------------------- |
-| emp_id         | INTEGER | Employee ID                      |
-| date           | TEXT    | Attendance date                  |
-| clock_in       | TEXT    | Time of punch in                 |
-| clock_out      | TEXT    | Time of punch out                |
-| working_hours  | REAL    | Total worked hours               |
-| overtime_hours | REAL    | Overtime hours                   |
-| status         | TEXT    | PRESENT/HALF DAY/OVERTIME/ABSENT |
-
-6. Leave_Record Table
-| Column         | Type    | Description               |
-| -------------- | ------- | ------------------------- |
-| leave_id       | INTEGER | Primary key               |
-| emp_id         | INTEGER | Employee ID               |
-| leave_type     | TEXT    | Type of leave             |
-| start_date     | TEXT    | YYYY-MM-DD                |
-| end_date       | TEXT    | YYYY-MM-DD                |
-| leave_duration | REAL    | Number of days            |
-| status         | TEXT    | PENDING/APPROVED/REJECTED |
-
-7. Leave_Balance Table
-| Column      | Type    | Description          |
-| ----------- | ------- | -------------------- |
-| emp_id      | INTEGER | Employee ID          |
-| total_leave | REAL    | Remaining leave days |
-
-8. Payroll Table
-| Column    | Type    | Description                      |
-| --------- | ------- | -------------------------------- |
-| emp_id    | INTEGER | Employee ID                      |
-| basic_pay | REAL    | Monthly salary                   |
-| deduction | REAL    | Deduction for leave/unpaid hours |
-
-Usage Guide
------------
-Main Menu Options:
-------------------
-Register
-Login
-Exit
-
-Manager Dashboard:
-------------------
-View/Add/Edit/Delete/Search Employees
-Manage Attendance, Leave, and Salary
-
-Employee Dashboard:
---------------------
-Reset Password
-View/Edit Profile
-Punch In / Punch Out
-Apply for Leave
-View Leave Status
-View Salary Details
-
-Note:
-Passwords must contain at least 1 uppercase, 1 lowercase, 1 digit, 1 special character, and minimum 6 characters.
-Leave applications exceeding balance are automatically treated as Paid Leave and deducted from salary.
-
-How to Run the Project
------------------------
-1. Clone the repository
------------------------
-git clone https://github.com/Sajmiya-S/employee-management-system-miniproject.git
-cd employee-management-system-miniproject
-
-2. Install dependencies
--------------------------
-(No external libraries needed except Python + SQLite)
-
-3. Run the application
-------------------------
-python ems.py
